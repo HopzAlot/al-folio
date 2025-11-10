@@ -6,10 +6,10 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
-  image: D:\Pictures\Pinterest Dump\IMG20251031234232.jpg
+  image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>+92 328 1407880</p>
+    <p>Computer Enginner, NUST</p>
     <p>Islamabad, Pakistan</p>
     <p>Muscat, Oman</p>
 
@@ -29,11 +29,11 @@ latest_posts:
 Hi!! I am an Aspiring Backend/DevOps Engineering based in Islamabad, Pakistan. I find Real World Problems and solve them through the means of Coding. I'm in the early stages of my learning but i try to strengthen my concepts via projects.
 
 My interests include Backend Development, DevOps and Cloud Computing. My goal is to apply my knowledge to tackle daily life conundrums.
-
+<!-- 
 Languga
 
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
 Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
