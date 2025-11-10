@@ -6,12 +6,12 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: D:\Pictures\Pinterest Dump\IMG20251031234232.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>+92 328 1407880</p>
+    <p>Islamabad, Pakistan</p>
+    <p>Muscat, Oman</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -26,6 +26,11 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+Hi!! I am an Aspiring Backend/DevOps Engineering based in Islamabad, Pakistan. I find Real World Problems and solve them through the means of Coding. I'm in the early stages of my learning but i try to strengthen my concepts via projects.
+
+My interests include Backend Development, DevOps and Cloud Computing. My goal is to apply my knowledge to tackle daily life conundrums.
+
+Languga
 
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
