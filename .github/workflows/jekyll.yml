@@ -1,4 +1,4 @@
-name: Deploy Jekyll site to Pages
+name: Deploy Jekyll Site to GitHub Pages
 
 on:
   push:
@@ -16,20 +16,38 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Install system dependencies for your custom plugins
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick nodejs npm
+
+      # Setup Ruby
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.1.7'
           bundler-cache: true
 
-      - name: Install dependencies
-        run: bundle install --jobs 4 --retry 3
+      # Install Bundler
+      - name: Install Bundler
+        run: gem install bundler
 
+      # Install Node terser globally for jekyll-terser
+      - name: Install Node Terser
+        run: npm install -g terser
+
+      # Install gems
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3 --verbose
+
+      # Build site
       - name: Build Jekyll site
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
 
+      # Upload artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
