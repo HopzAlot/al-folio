@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: <h5><strong>Solving and Automating Complex Tasks!!</strong></h5>
 

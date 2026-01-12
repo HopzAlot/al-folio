@@ -1,81 +1,127 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
-importance: 2
-category: work
-giscus_comments: true
+title: Synthron
+description: AI-Powered Custom PC Recommendation Platform.
+img:
+importance: 1
+category: Side Projects
+giscus_comments: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## 🛠️ Synthron — Custom PC Recommendation Platform
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+**Synthron** is a full-stack web application that intelligently recommends custom PC builds based on user requirements such as budget, use-case (gaming, editing, productivity), regional availability, and personal preferences.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+The platform combines **AI-driven prompt understanding** with **real-time price scraping** to generate practical, up-to-date PC configurations. It focuses on solving a real-world problem: translating vague user intent into technically compatible and cost-effective hardware builds.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+---
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## 🧠 System Overview
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+[Image of a full-stack web architecture diagram featuring React frontend, Django backend, PostgreSQL, Redis, LLaMA 3.2, and Playwright scraper]
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+- **Frontend:** React with a modern, responsive UI
+- **Backend:** Django + Django REST Framework
+- **Database:** PostgreSQL
+- **Caching:** Redis for temporary storage and faster responses
+- **AI Layer:** Local **LLaMA 3.2** model for natural-language prompt parsing
+- **Scraping Engine:** Playwright for dynamic content extraction
 
-{% raw %}
+The backend exposes REST APIs consumed by the frontend, while multiple specialized agents collaborate to generate a final build recommendation.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+> 🔍 Current scraping reliability averages **70–75%**, with ongoing improvements planned.
 
-{% endraw %}
+---
+
+## ✨ Key Features
+
+- 🧠 **AI-driven prompt interpretation** using LLaMA 3.2  
+- 🔍 **Real-time price and availability scraping** from trusted vendors  
+- ⚙️ **Component-specific agents** (CPU, GPU, RAM, Storage, Motherboard)  
+- 🌍 **Region-aware pricing** and availability detection  
+- 🔐 **JWT-based authentication** with HttpOnly cookies  
+- 📦 **User build history** stored and retrievable  
+- 🧪 **Compatibility checks** (e.g., socket, chipset validation)  
+- ⚡ **Fast, modern UI** built with React and Tailwind CSS  
+
+---
+
+## 🔗 How It Works
+
+1. **User Input**  
+   Example:  
+   > “I want a gaming PC under $1000 in the USA, preferably AMD-based.”
+
+2. **AI Parsing**  
+   The LLM extracts intent, budget, region, and preferences.
+
+3. **Agent Activation**  
+   Each component agent independently searches for compatible parts.
+
+4. **Data Collection**  
+   - URLs are gathered programmatically  
+   - Playwright scrapes live pricing and stock data
+
+5. **Ranking & Selection**  
+   Components are ranked based on:
+   - Price
+   - Availability
+   - Compatibility
+   - User preferences
+
+6. **Final Build Output**  
+   The recommended configuration is rendered on the frontend with links and pricing.
+
+---
+
+## 🌐 Trusted Vendors
+
+- Amazon  
+- Newegg  
+- Micro Center  
+- Scan UK  
+- Additional regional retailers  
+
+---
+
+## ⚠️ Current Limitations
+
+- Dynamic anti-bot measures may reduce scraping accuracy  
+- Not all queries yield valid results (fallback logic is used)  
+- Currency and regional detection are still evolving  
+
+---
+
+## 🔮 Future Improvements
+
+- Improved scraping reliability using AI-assisted heuristics  
+- Addition of PSU and PC case recommendations  
+- Affiliate tracking integration  
+- Admin dashboard for scraping diagnostics  
+- OAuth authentication (Google, GitHub)  
+- Enhanced DevOps workflows and cloud deployment  
+
+---
+
+## 🧰 DevOps & Deployment Roadmap
+
+- 🐳 Docker-based containerization  
+- ⚙️ CI/CD pipelines  
+- ☁️ Cloud deployment on AWS  
+- 🔄 Infrastructure automation  
+
+---
+
+## 🔗 Link to the CodeBase:
+
+You can explore the source code, view the project structure, or contribute to the development here:  
+👉 **[GitHub: Synthron](https://github.com/HopzAlot/Synthron)**
+
+---
+
+## 🤝 Contribution & Contact
+
+This project is actively evolving.  
+If you’re interested in contributing or discussing the system design, feel free to reach out:
+
+**Email:** rehasaqib2006@gmail.com
