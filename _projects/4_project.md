@@ -1,80 +1,78 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
+title: Autonomous Drone Fleet Simulator
+description: A high-fidelity 3D simulation for modeling collective quadrotor drone behavior.
+img: assets/img/dronesimulator_uml.webp
 importance: 3
-category: 
+category: Side Projects
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### Introduction
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+The **Autonomous Drone Fleet Coordination Simulator** is a high-fidelity 3D simulation platform designed to model the collective behavior of multiple quadrotor drones. This project explores how object-oriented programming concepts—such as encapsulation, modularity, inheritance, and composition—can be used to build complex interacting systems from simpler components. 
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+The simulator provides a safe and efficient way to test coordination and control algorithms, such as formation maintenance and collision avoidance, before hardware implementation in fields like precision agriculture and environmental research.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/dronesimulator_uml.jpg" title="System Architecture UML" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    The system architecture follows a modular, object-oriented design where each class represents a distinct physical or computational process.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### Key Features
+
+* **Autonomous Agent Modeling**: Each drone operates as an independent autonomous agent capable of movement, target tracking, and communication.
+* **Physics-Based Dynamics**: Implements translational and rotational motion using discrete-time Newtonian dynamics and Euler’s rotational equations.
+* **Decentralized Coordination**: Features consensus-based formation control where drones adjust motion based on local neighbor information.
+* **Safety Protocols**: Utilizes repulsive potential fields to prevent drone overlap and ensure collision avoidance.
+* **Stochastic Communication**: Models radio-based data exchange, incorporating spatial distance constraints and probabilistic signal loss.
+* **Performance Analytics**: Calculates system-level metrics including average spacing, collision counts, and communication success rates.
+
+---
+
+### Core Components
+
+| Class | Description |
+| :--- | :--- |
+| **Simulator** | The core numerical engine managing time steps, numerical integration, and synchronization. |
+| **Drone** | Encapsulates physical parameters (mass, inertia, drag) and bridges the physical model with the software environment. |
+| **Controller** | Implements PID/PD control laws to convert positional discrepancies into thrust and torque. |
+| **FormationManager** | Maintains spatial coordination and relative positioning within a group. |
+| **CollisionAvoidance** | Applies repulsive forces to prevent inter-drone collisions. |
+
+---
+
+### Mathematical Foundations
+
+The simulator relies on several mathematical models to ensure realism. You can see how these equations are integrated into the Java logic for real-time calculation:
+
+$$ma = mg + RT + F_{aero} + F_{rep} + F_{form}$$
+
+$$\dot{\omega} = I^{-1}(\tau - \omega \times (I\omega))$$
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <div class="card p-3">
+            <strong>Technical Specifications:</strong>
+            <ul>
+                <li><strong>Language:</strong> Java</li>
+                <li><strong>Model:</strong> Discrete-time steps ($\Delta t$)</li>
+                <li><strong>Physics:</strong> Newton-Euler equations</li>
+                <li><strong>Outputs:</strong> CSV (telemetry) and TXT (summaries)</li>
+            </ul>
+        </div>
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    System specifications and mathematical implementation details.
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## 🔗 Link to the CodeBase:
 
-{% raw %}
+You can explore the source code, view the project structure, or contribute to the development here:  
+👉 **[GitHub: Drone_Simulator](https://github.com/HopzAlot/Drone_Simulator)**
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+---
